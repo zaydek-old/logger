@@ -1,5 +1,4 @@
-// Package logger implements a basic logger that takes a string-returning func.
-// It is intended for prefixing a Logger's output with more than static text.
+// Package logger implements a logger that takes a writer and a func to prefix its output.
 package logger
 
 import (
@@ -8,7 +7,7 @@ import (
 	"sync"
 )
 
-// Logger is mutex-protected.
+// A Logger is a mutex-protected logger.
 type Logger struct {
 	m sync.Mutex
 	w io.Writer
