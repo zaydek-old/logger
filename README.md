@@ -6,7 +6,8 @@ I was frustrated with the lack of granular controls `pkg/log` predefines in its 
 
 Here's example usage:
 
-```package main
+```
+package main
 
 import (
 	"os"
