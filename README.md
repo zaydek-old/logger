@@ -6,14 +6,14 @@ I was frustrated with the lack of granular controls `pkg/log` predefines in its 
 
 Here's example usage:
 
-```
+```go
 package main
 
 import (
 	"os"
 	"time"
 
-	"owl.delivery/etc/logger"
+	"github.com/zaydek/logger"
 )
 
 func main() {
@@ -24,7 +24,7 @@ func main() {
 
 And a more granular example:
 
-```
+```go
 func main() {
 	l := logger.New(os.Stderr, func() string { return time.Now().Format("15:04:05.000000") }) // usecs
 	l.Println("hello, darkness...") // e.g. "15:04:05.000000 hello, darkness..."
