@@ -1,6 +1,10 @@
-This logger usses a string-returning func passed in at construction to _generate_ output per call, as supposed to static text. I wanted to have complete control over the details of how `pkg/log` formats time, more than it's predefined constants, so this idea came to light.
+# logger
 
-Here's an example of usage:
+This is one of the first packages I wrote in Go.
+
+I was frustrated with the lack of granular controls `pkg/log` predefines in its constants, e.g. `log.Ltime`, etc., so I wrote this, instaed.
+
+Here's example usage:
 
 ```package main
 
@@ -17,11 +21,11 @@ func main() {
 }
 ```
 
-And a more granular example of usage:
+And a more granular example:
 
 ```
 func main() {
-	l := logger.New(os.Stdout, func() string { return time.Now().Format("2006-01-02 15:04:05.000000") }) // microseconds
-	l.Println("hello, world!") // e.g. "2006-01-02 15:04:05.000000 hello, world!"
+	l := logger.New(os.Stderr, func() string { return time.Now().Format("15:04:05.000000") }) // usecs
+	l.Println("hello, darkness...") // e.g. "15:04:05.000000 hello, darkness..."
 }
 ```
