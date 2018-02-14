@@ -1,4 +1,6 @@
-This is one of the first packages I wrote in Go. I wanted to have more control over how a `Logger` prefixes output, so instead I wrote this.
+This is one of the first packages I wrote in Go.
+
+I wanted to have more control over how a `Logger` prefixes output, so instead I wrote this.
 
 Here's example usage:
 
