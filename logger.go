@@ -1,3 +1,5 @@
+// Package logger implements a basic logger that takes a string-returning func.
+// It is intended for prefixing a Logger's output with more than static text.
 package logger
 
 import (
