@@ -1,8 +1,4 @@
-# logger
-
-This is one of the first packages I wrote in Go.
-
-I was frustrated with the lack of granular controls `pkg/log` predefines in its constants, e.g. `log.Ltime`, etc., so I wrote this, instaed.
+This is one of the first packages I wrote in Go. I wanted to have more control over how a `Logger` prefixes output, so instead I wrote this.
 
 Here's example usage:
 
